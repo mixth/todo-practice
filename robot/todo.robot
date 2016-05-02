@@ -10,3 +10,8 @@ Add New To-do Item, New Item Should Appear In List
     Input Text    new-item-input    orange juice
     Click Button    add-new-item-btn
     Element Should Contain    to-do-list    orange juice
+
+To-do List Is Visible When Visit The App
+    Open Browser    ${APP_PATH}
+    Wait Until Page Contains Element    to-do-list
+    Element Should Contain    to-do-list    apple

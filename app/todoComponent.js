@@ -2,8 +2,11 @@
 
 (function() {
   function todoController($http) {
-    this.$onInit = function() {
-      $http.get("http://localhost:4444");
+    var self = this;
+    self.$onInit = function() {
+      $http.get("http://localhost:4444").then(function(result) {
+        self.list = result.data;
+      });
     }
   }
 

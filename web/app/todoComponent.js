@@ -11,6 +11,7 @@
   }
 
   angular.module("todoApp", []).component("todo", {
-     controller: todoController
+    templateUrl: "/app/todoComponent.html",
+    controller: todoController
   });
 })();
